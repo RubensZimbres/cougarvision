@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(awk '{print $NF}')",
+      "Bash(sed 's/=.*/=<redacted>/' .env)",
+      "Bash(grep -oE '>[A-Z][A-Za-z0-9 /&,\\\\.:—–\\\\x27\\(\\)%-]{6,75}<' app/templates/dashboards/autonomous_workflow.html)",
+      "Bash(grep -oE '>[A-Z][A-Za-z0-9 /&,\\\\.:—–\\\\x27\\(\\)%-]{6,75}<' app/templates/dashboards/local_ai_scanner.html)",
+      "Bash(grep -oE '>[A-Z][A-Za-z0-9 /&,\\\\.:—–\\\\x27\\(\\)%-]{8,75}<' app/templates/dashboards/web-application-execution.html)",
+      "Bash(grep -rno \"authedFetch\\([^\\)]\\\\{0,80\\\\}\" app/templates/dashboards/aws_ai_scanner.html)",
+      "Bash(grep -rno \"authedFetch\\([^\\)]\\\\{0,80\\\\}\\\\|/api/[a-z/{}._-]*\" app/templates/dashboards/executive_summary.html)",
+      "Bash(sort -u -t: -k3)",
+      "Bash(./.venv/bin/python -c ' *)",
+      "Bash(echo \"--- exit $? ---\")",
+      "Bash(bash -n aws/provision_aws_fixtures.sh)"
+    ]
+  }
+}
